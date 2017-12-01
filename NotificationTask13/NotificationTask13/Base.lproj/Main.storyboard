@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R1a-Nd-fHp">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="NotificationTask13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0O-6n-K2U">
+                                <rect key="frame" x="0.0" y="130.5" width="320" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvX-vk-Skw">
+                                <rect key="frame" x="90" y="476" width="140" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="R7Y-W6-pKJ"/>
+                                    <constraint firstAttribute="width" constant="140" id="tif-RQ-c50"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qSY-S0-3fQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xET-Uk-8ce">
+                                <rect key="frame" x="90" y="406" width="140" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RiS-2h-nDv"/>
+                                    <constraint firstAttribute="width" constant="140" id="fiB-WT-Ael"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Go to Next">
+                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="t72-do-iFl" kind="show" id="lAW-aL-qCL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xET-Uk-8ce" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="2on-mb-RRK"/>
+                            <constraint firstItem="f0O-6n-K2U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7d7-1N-Wrf"/>
+                            <constraint firstItem="f0O-6n-K2U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="8yM-ST-tnu"/>
+                            <constraint firstItem="xET-Uk-8ce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aPj-SG-paN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f0O-6n-K2U" secondAttribute="trailing" id="hmV-9Y-yft"/>
+                            <constraint firstItem="bvX-vk-Skw" firstAttribute="top" secondItem="xET-Uk-8ce" secondAttribute="bottom" constant="30" id="iWx-UJ-XmW"/>
+                            <constraint firstItem="bvX-vk-Skw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lmW-kp-D0U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jaF-sa-wJP"/>
+                    <connections>
+                        <outlet property="ibLabelStatusNotification" destination="f0O-6n-K2U" id="hag-Au-J0S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515.625" y="118.30985915492958"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="tAO-Xv-WUJ">
+            <objects>
+                <viewController id="t72-do-iFl" customClass="SecondViewController" customModule="NotificationTask13" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="09Q-XP-q0j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoX-29-lIv">
+                                <rect key="frame" x="0.0" y="130.5" width="320" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKP-s8-ygn">
+                                <rect key="frame" x="70" y="406" width="180" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Kft-it-YPN"/>
+                                    <constraint firstAttribute="width" constant="180" id="ahT-1A-kMc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Send Notification">
+                                    <color key="titleColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendNotification:" destination="t72-do-iFl" eventType="touchUpInside" id="pKt-wH-cD7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NoX-29-lIv" firstAttribute="centerY" secondItem="09Q-XP-q0j" secondAttribute="centerY" multiplier="0.5" id="2MX-3t-H78"/>
+                            <constraint firstItem="yKP-s8-ygn" firstAttribute="centerX" secondItem="09Q-XP-q0j" secondAttribute="centerX" id="7Mw-rc-brR"/>
+                            <constraint firstItem="NoX-29-lIv" firstAttribute="trailing" secondItem="emW-Vr-Fts" secondAttribute="trailing" id="RZY-in-BLw"/>
+                            <constraint firstItem="NoX-29-lIv" firstAttribute="leading" secondItem="emW-Vr-Fts" secondAttribute="leading" id="a5V-Mi-OqD"/>
+                            <constraint firstItem="yKP-s8-ygn" firstAttribute="centerY" secondItem="09Q-XP-q0j" secondAttribute="centerY" multiplier="1.5" id="jxM-1f-1Dc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="emW-Vr-Fts"/>
+                    </view>
+                    <connections>
+                        <outlet property="ibLabelStatusNotification" destination="NoX-29-lIv" id="El5-0B-oub"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUZ-qN-18T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="60b-tR-qQb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R1a-Nd-fHp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fBc-Ed-mGF">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dr0-eK-cHX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qZa-qA-cwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-296" y="118"/>
+        </scene>
+    </scenes>
+</document>
